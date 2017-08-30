@@ -32,13 +32,13 @@ export class LinkedItemsComponent implements OnInit {
 	constructor(private clinicService: ClinicService, private therapistService: TherapistService ) { }
 
   ngOnInit() {
-    switch(this.currentType) {
-      case 'clinic': 
+    switch (this.currentType) {
+      case 'clinic':
         this.currentService = this.clinicService;
         break;
-      case 'therapist':  
+      case 'therapist':
         this.currentService = this.therapistService;
-        break;  
+        break;
     }
   }
 

@@ -41,8 +41,7 @@ export class ClinicService {
   }
 
   edit(editedClinic: Clinic): void {
-    const clinic = this.clinicsList.find(clinic => clinic.id === editedClinic.id);
-    clinic.name = editedClinic.name;
+    this.clinicsList.find(clinic => clinic.id === editedClinic.id).name = editedClinic.name;
     this.saveAndResponseClinics(this.clinicsList);
   }
 }

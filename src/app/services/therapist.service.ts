@@ -38,8 +38,7 @@ export class TherapistService {
   }
 
   edit(editedTherapist: Therapist): void {
-    const therapist = this.therapistsList.find(therapist => therapist.id === editedTherapist.id);
-    therapist.name = editedTherapist.name;
+    this.therapistsList.find(therapist => therapist.id === editedTherapist.id).name = editedTherapist.name;
     this.saveAndResponseTherapists(this.therapistsList);
   }
 
@@ -49,5 +48,5 @@ export class TherapistService {
       return therapist;
     });
     this.saveAndResponseTherapists(this.therapistsList);
-  }  
+  }
 }

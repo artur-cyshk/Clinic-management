@@ -23,7 +23,7 @@ export class TherapistComponent {
 	}
 
 	changeClinicStatus($event): void {
-		if(!$event.linkStatus) {
+		if (!$event.linkStatus) {
 			this.therapist.clinicsIds.push($event.itemId);
 		} else {
 			this.therapist.clinicsIds = this.therapist.clinicsIds.filter(item => item !== $event.itemId);

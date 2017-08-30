@@ -36,8 +36,7 @@ export class PatientService {
   }
 
   edit(editedPatient: Patient): void {
-    const patient = this.patientsList.find(patient => patient.id === editedPatient.id);
-    patient.name = editedPatient.name;
+    this.patientsList.find(patient => patient.id === editedPatient.id).name = editedPatient.name;
     this.saveAndResponsePatients(this.patientsList);
   }
 
@@ -50,9 +49,9 @@ export class PatientService {
 
   removeClinicFromAllPatients(clinicId: string): void {
     this.saveAndResponsePatients(this.removeItemsFromAllPatients('clinicsIds', clinicId));
-  }  
+  }
 
   removeTherapistFromAllPatients(therapistId: string): void {
     this.saveAndResponsePatients(this.removeItemsFromAllPatients('therapistsIds', therapistId));
-  } 
+  }
 }

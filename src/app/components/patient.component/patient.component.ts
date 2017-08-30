@@ -7,7 +7,7 @@ import { Patient } from '../../models';
   templateUrl: './patient.component.html',
   styleUrls: ['./patient.component.css']
 })
-export class PatientComponent { 	
+export class PatientComponent {
 
 	@Output() onPatientRemoved: EventEmitter<any> = new EventEmitter<any>();
 	@Output() onPatientEdited: EventEmitter<any> = new EventEmitter<any>();
@@ -22,7 +22,7 @@ export class PatientComponent {
 	}
 
 	changeIdsStatus(field, $event): void {
-		if(!$event.linkStatus) {
+		if (!$event.linkStatus) {
 			this.patient[field].push($event.itemId);
 		} else {
 			this.patient[field] = this.patient[field].filter(item => item !== $event.itemId);

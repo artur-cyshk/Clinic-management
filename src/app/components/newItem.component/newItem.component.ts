@@ -17,12 +17,12 @@ export class NewItemComponent {
 	constructor(private helperService: HelperService) { }
 
 	addItem(): void {
-		if(this.newItemValue) {
+		if (this.newItemValue) {
 			this.newItemAdded.emit({
 				name: this.newItemValue,
 				id: this.helperService.generateGuid()
 			});
 			this.newItemValue = '';
-		}		
+		}
 	}
 }

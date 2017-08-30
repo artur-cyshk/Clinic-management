@@ -7,7 +7,7 @@ import { LocalStorageService } from '../../services';
   styleUrls: ['./navigate.component.css']
 })
 export class NavigateComponent {
-	
+
 	private _isPanelExpanded: boolean = !!this.localStorageService.getItem('isPanelExpanded');
 
 	get isPanelExpanded(): boolean {

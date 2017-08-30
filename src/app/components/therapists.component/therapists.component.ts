@@ -10,7 +10,7 @@ import { Therapist } from '../../models';
   styleUrls: ['./therapists.component.css']
 })
 export class TherapistsComponent {
-	
+
 	constructor(private therapistService: TherapistService) { }
 
 	addNewTherapist(newTherapist: { id: string, name: string }): void {

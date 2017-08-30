@@ -10,7 +10,7 @@ import { Patient } from '../../models';
   styleUrls: ['./patients.component.css']
 })
 export class PatientsComponent {
-	
+
 	constructor(private patientService: PatientService) { }
 
 	addNewPatient(newPatient: { id: string, name: string }): void {
