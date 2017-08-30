@@ -2,13 +2,13 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Roboto', sans-serif;
 }
 
 body * {
 	box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 ul {
@@ -31,4 +31,33 @@ router-outlet + * {
   flex-direction: column;
   padding: 15px;
   overflow-y: auto;
+}
+
+button.item-action {
+  width: 40px;
+  height: 100%;
+  background: #3999b7;
+  border: 0;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  transition: 0.1s linear all;
+}
+
+button.item-action:hover {
+  background-color: #33afd6;
+}
+
+button.item-action:active, button.item-action:focus {
+  background-color: #18596d;
+}
+
+button[disabled],
+button[disabled]:hover,
+button[disabled]:active,
+button[disabled]:focus {
+  cursor: default;
+  background-color: #74a2b1;
+  color: rgba(255, 255, 255, 0.25);
 }

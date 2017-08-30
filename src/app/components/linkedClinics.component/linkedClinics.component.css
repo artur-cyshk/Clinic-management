@@ -1,0 +1,75 @@
+.linked-info {
+	height: 30px;
+  position: relative;
+  z-index: 1;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: #3999b7;
+  font-weight: 200;
+  color: #ececec;
+  cursor: pointer;
+  transition: 0.1s linear all;
+}
+
+.topic, .digit {
+  color: #def7ff;
+}
+
+.linked-info > i {
+  font-size: 20px;
+}
+
+.linked-info:hover, .linked-info.active {
+  background-color: #2b6f84;
+}
+
+.linked-list {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+  font-weight: 200;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	background-color: #2b6f84;
+  color: #ececec;
+}
+
+.linked-list > li {
+  width: 115px;
+  display: inline-flex;
+  justify-content: center;
+  padding: 2px;
+  align-items: center;
+  cursor: pointer;
+  height: 35px;
+  background-color: rgba(0, 0, 0, 0.31);
+  color: #f3f3f3;
+  border-radius: 3px;
+  margin: 5px;
+  border: 1px solid transparent;
+}
+
+.linked-list > li.is-linked {
+  border-color: #30ceff;
+  color: #30ceff;
+}
+
+.linked-list > li > span {
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.help {
+  font-size: 11px;
+  margin-right: 3px;
+}
+
+.toggle-item {
+  display: flex;
+  align-items: center;
+}

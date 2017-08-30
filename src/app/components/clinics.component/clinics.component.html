@@ -1,7 +1,6 @@
+<app-new-item (newItemAdded)="addNewClinic($event)" [topicName]="'clinic'" [iconClassName]="'fa-building-o'"></app-new-item>
 <ul>
 	<li *ngFor="let clinic of clinicService.observableList | async">
-		{{clinic.name}}
+		<app-clinic (onClinicEdited)="editClinic($event)" [clinic]="clinic" (onClinicRemoved)="removeClinic($event)"></app-clinic>
 	</li>
 </ul>
-
-<button (click)="addNewClinic('aaa')"></button>

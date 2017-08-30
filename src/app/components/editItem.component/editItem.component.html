@@ -1,0 +1,18 @@
+<div class="input-container">
+	<span *ngIf="!isEditing;else edit">{{item.name}}</span>
+	<ng-template #edit>
+		<input #editingInput type="text" [placeholder]="'Add new ' + topicName" [(ngModel)]="item.name">
+	</ng-template>
+	<i class="fa" [ngClass]="iconClassName"></i>
+</div>
+<button class="item-action" *ngIf="!isEditing;else editingButtons" (click)="startEditing()">
+	<i class="fa fa-pencil" aria-hidden="true"></i>
+</button>
+<ng-template #editingButtons>
+	<button [disabled]="!item.name" class="item-action" *ngIf="isEditing" (click)="acceptEditing()">
+		<i class="fa fa-check" aria-hidden="true"></i>
+	</button>
+	<button class="item-action" *ngIf="isEditing" (click)="cancelEditing()">
+		<i class="fa fa-ban" aria-hidden="true"></i>
+	</button>
+</ng-template>

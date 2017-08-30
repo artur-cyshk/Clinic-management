@@ -1,0 +1,7 @@
+<div class="therapist-info">
+	<app-edit-item class="content" (itemEditted)="editTherapist($event)" [iconClassName]="'fa-user-md'" [topicName]="'therapist'" [item]="therapist"></app-edit-item>
+	<button class="item-action" (click)="removeTherapist(therapist.id)">
+		<i class="fa fa-trash" aria-hidden="true"></i>
+	</button>
+</div>
+<app-linked-clinics [linkedClinicsIds]="therapist.clinicsIds" (clinicStatusChanged)="changeClinicStatus($event)"></app-linked-clinics>

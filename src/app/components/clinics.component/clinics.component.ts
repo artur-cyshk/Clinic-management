@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { ClinicService } from '../../services';
-
+import { Clinic } from '../../models';
 
 @Component({
   selector: 'app-clinics',
@@ -10,10 +10,17 @@ import { ClinicService } from '../../services';
 })
 export class ClinicsComponent {
 
-	constructor(private clinicService: ClinicService) {}
+	constructor(private clinicService: ClinicService) { }
 
-	addNewClinic(name: string): void {
-		this.clinicService.add({name: name, id: '20'});
+	addNewClinic(newClinic: Clinic): void {
+		this.clinicService.add(newClinic);
 	}
 
+	removeClinic(id: string): void {
+		this.clinicService.remove(id);
+	}
+
+	editClinic(editedClinic: Clinic): void {
+		this.clinicService.edit(editedClinic);
+	}
 }

@@ -1,0 +1,9 @@
+<div class="new-item">
+	<div class="input-container">
+		<input type="text" [placeholder]="'Add new ' + topicName" [(ngModel)]="newItemValue">
+		<i class="fa" [ngClass]="iconClassName"></i>
+	</div>
+	<button [disabled]="!newItemValue" class="item-action" (click)="addItem()">
+		<i class="fa fa-check"></i>
+	</button>
+</div>

@@ -1,0 +1,4 @@
+<app-edit-item class="content" (itemEditted)="editClinic($event)" [iconClassName]="'fa-building-o'" [topicName]="'clinic'" [item]="clinic"></app-edit-item>
+<button class="item-action" (click)="removeClinic(clinic.id)">
+	<i class="fa fa-trash" aria-hidden="true"></i>
+</button>

@@ -1,0 +1,28 @@
+<div>
+	<div class="linked-info" [ngClass]="{'active': isListShown}" (click)="isListShown = !isListShown">
+	  <span>
+		 	There are
+		 	<span class="digit">{{linkedClinicsIds.length}}</span>
+		 	of
+		 	<span class="digit">{{(clinicService.observableList | async)?.length}}</span>
+		 	linked
+		 	<span class="topic">clinics</span>
+	  </span>
+	  <div class="toggle-item">
+	  	<span class="help"> Click to open </span>
+	 		<i class="fa" [ngClass]="isListShown ? 'fa-angle-double-up' : 'fa-angle-double-down'" aria-hidden="true"></i>
+	  </div>
+	  
+	</div>
+	<ul class="linked-list" *ngIf="isListShown" [@enterAnimation]>
+		<li 
+		  [title]="clinic.name"
+			(click)="linkClinic(clinic.id, isClinicLinked(clinic.id))"
+			[ngClass]="{'is-linked': isClinicLinked(clinic.id)}"
+			*ngFor="let clinic of clinicService.observableList | async"
+		>
+			<span>{{clinic.name}}</span>		
+		</li>
+		<span *ngIf="(clinicService.observableList | async)?.length === 0">There are no clinics</span>
+	</ul>
+</div>

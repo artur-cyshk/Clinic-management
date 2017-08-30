@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -7,17 +8,24 @@ import { RouterModule } from '@angular/router';
 import {
   AppComponent,
   WorkflowComponent,
+  ClinicComponent,
   ClinicsComponent,
+  LinkedClinicsComponent,
+  PatientComponent,
   PatientsComponent,
+  TherapistComponent,
   TherapistsComponent,
-  NavigateComponent
+  NavigateComponent,
+  NewItemComponent,
+  EditItemComponent
 } from './components';
 
 import {
   LocalStorageService,
   ClinicService,
   PatientService,
-  TherapistService
+  TherapistService,
+  HelperService
 } from './services';
 import { router } from './app.router';
 
@@ -26,13 +34,20 @@ import { router } from './app.router';
   declarations: [
     AppComponent,
     WorkflowComponent,
+    ClinicComponent,
     ClinicsComponent,
+    PatientComponent,
     PatientsComponent,
+    TherapistComponent,
     TherapistsComponent,
-    NavigateComponent
+    NavigateComponent,
+    NewItemComponent,
+    EditItemComponent,
+    LinkedClinicsComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(router)
@@ -41,7 +56,8 @@ import { router } from './app.router';
     LocalStorageService,
     ClinicService,
     PatientService,
-    TherapistService
+    TherapistService,
+    HelperService
   ],
   bootstrap: [AppComponent]
 })
