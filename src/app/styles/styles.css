@@ -1,0 +1,34 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+body * {
+	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+app-root {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	width: 100%;
+}
+
+
+router-outlet + * {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 15px;
+  overflow-y: auto;
+}

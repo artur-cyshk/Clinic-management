@@ -1,0 +1,19 @@
+{
+	"data": [
+		{
+			"id": 0,
+			"name": "Ivan Ivanov",
+			"clinicsIds": [0, 1]
+		},
+		{
+			"id": 1,
+			"name": "Petya Petrov",
+			"clinicsIds": [2, 3]
+		},
+		{
+			"id": 2,
+			"name": "Alex Bond",
+			"clinicsIds": [4, 5]
+		}
+	]
+}

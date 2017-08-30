@@ -1,0 +1,15 @@
+<nav class="main-menu" [ngClass]="{'is-panel-expanded': isPanelExpanded}">
+	<div class="logo">
+		<i class="fa fa-hospital-o" aria-hidden="true"></i>
+	</div>
+	<ul>
+	  <li class="menu-item" *ngFor="let route of routes" [routerLink]="route.route" routerLinkActive="active">
+			<i class="fa" [ngClass]="route.icon"></i> 
+			<a *ngIf="isPanelExpanded">{{route.name}}</a>
+		</li>
+	</ul>
+	<button (click)="isPanelExpanded = !isPanelExpanded">
+		<i class="fa" [ngClass]="isPanelExpanded ? 'fa-angle-double-left' : 'fa-angle-double-right'" aria-hidden="true"></i>
+		<span *ngIf="isPanelExpanded">Hide</span>
+	</button>
+</nav>

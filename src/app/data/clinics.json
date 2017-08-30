@@ -1,0 +1,28 @@
+{
+	"data": [
+		{
+			"id": 0,
+			"name": "Texas Medical Center"
+		},
+		{
+			"id": 1,
+			"name": "Parkway Health Care"
+		},
+		{
+			"id": 2,
+			"name": "Bumrungrad Medical Center"
+		},
+		{
+			"id": 3,
+			"name": "American Hospital of Paris"
+		},
+		{
+			"id": 4,
+			"name": "Mayo Clinic"
+		},
+		{
+			"id": 5,
+			"name": "The London Clinic"
+		}
+	]
+}

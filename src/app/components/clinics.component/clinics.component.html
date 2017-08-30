@@ -1,0 +1,7 @@
+<ul>
+	<li *ngFor="let clinic of clinicService.observableList | async">
+		{{clinic.name}}
+	</li>
+</ul>
+
+<button (click)="addNewClinic('aaa')"></button>
