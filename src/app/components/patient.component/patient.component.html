@@ -1,1 +1,8 @@
-patient
+<div class="patient-info">
+	<app-edit-item class="content" (itemEditted)="editPatient($event)" [iconClassName]="'fa-address-card-o'" [topicName]="'patient'" [item]="patient"></app-edit-item>
+	<button class="item-action" (click)="removePatient(patient.id)">
+		<i class="fa fa-trash" aria-hidden="true"></i>
+	</button>
+</div>
+<app-linked-items [linkedIds]="patient.clinicsIds" [currentType]="'clinic'" (itemStatusChanged)="changeClinicStatus($event)"></app-linked-items>
+<app-linked-items [linkedIds]="patient.therapistsIds" [currentType]="'therapist'" (itemStatusChanged)="changeTherapistStatus($event)"></app-linked-items>

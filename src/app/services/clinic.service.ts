@@ -3,6 +3,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Observable } from 'rxjs/Observable';
 
 import { TherapistService } from './therapist.service';
+import { PatientService } from './patient.service';
 import { LocalStorageService } from './localStorage.service';
 
 import * as clinics from '../data/clinics.json';
@@ -17,25 +18,31 @@ export class ClinicService {
 
   get observableList(): Observable<Clinic[]> { return this.observableListSubject.asObservable(); }
 
-  constructor(private localStorageService: LocalStorageService, private therapistService: TherapistService) {}
+  constructor(
+    private localStorageService: LocalStorageService,
+    private therapistService: TherapistService,
+    private patientService: PatientService) {}
+
+  private saveAndResponseClinics(clinicsList: Clinic[]): void {
+    this.localStorageService.setItem('clinics', clinicsList);
+    this.observableListSubject.next(clinicsList);
+  }
 
   add(clinic: Clinic): void {
     this.clinicsList.push(clinic);
-    this.localStorageService.setItem('clinics', this.clinicsList);
-    this.observableListSubject.next(this.clinicsList);
+    this.saveAndResponseClinics(this.clinicsList);
   }
 
   remove(id: string): void {
   	this.clinicsList = this.clinicsList.filter(clinic => clinic.id !== id);
     this.therapistService.removeClinicFromAllTherapists(id);
-  	this.localStorageService.setItem('clinics', this.clinicsList);
-  	this.observableListSubject.next(this.clinicsList);
+    this.patientService.removeClinicFromAllPatients(id);
+  	this.saveAndResponseClinics(this.clinicsList);
   }
 
   edit(editedClinic: Clinic): void {
     const clinic = this.clinicsList.find(clinic => clinic.id === editedClinic.id);
     clinic.name = editedClinic.name;
-    this.localStorageService.setItem('clinics', this.clinicsList);
-    this.observableListSubject.next(this.clinicsList);
+    this.saveAndResponseClinics(this.clinicsList);
   }
 }

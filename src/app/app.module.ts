@@ -10,7 +10,7 @@ import {
   WorkflowComponent,
   ClinicComponent,
   ClinicsComponent,
-  LinkedClinicsComponent,
+  LinkedItemsComponent,
   PatientComponent,
   PatientsComponent,
   TherapistComponent,
@@ -43,7 +43,7 @@ import { router } from './app.router';
     NavigateComponent,
     NewItemComponent,
     EditItemComponent,
-    LinkedClinicsComponent
+    LinkedItemsComponent
   ],
   imports: [
     BrowserModule,

@@ -4,4 +4,4 @@
 		<i class="fa fa-trash" aria-hidden="true"></i>
 	</button>
 </div>
-<app-linked-clinics [linkedClinicsIds]="therapist.clinicsIds" (clinicStatusChanged)="changeClinicStatus($event)"></app-linked-clinics>
+<app-linked-items [linkedIds]="therapist.clinicsIds" [currentType]="'clinic'" (itemStatusChanged)="changeClinicStatus($event)"></app-linked-items>

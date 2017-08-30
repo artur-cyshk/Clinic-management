@@ -1,3 +1,7 @@
+:host {
+  overflow: hidden;
+}
+
 .linked-info {
 	height: 30px;
   position: relative;
@@ -31,8 +35,6 @@
 	justify-content: center;
 	padding: 10px;
   font-weight: 200;
-	border-bottom-right-radius: 5px;
-	border-bottom-left-radius: 5px;
 	background-color: #2b6f84;
   color: #ececec;
 }

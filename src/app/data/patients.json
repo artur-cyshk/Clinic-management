@@ -3,20 +3,20 @@
 		{
 			"id": 0,
 			"name": "Ivan Ivanov",
-			"therapistsIds": [0, 1, 2],
-			"clinicsIds": [0, 1, 2]
+			"therapistsIds": [],
+			"clinicsIds": []
 		},
 		{
 			"id": 1,
 			"name": "Petya Petrov",
-			"therapistsIds": [0, 1, 2],
-			"clinicsIds": [0, 1, 2]
+			"therapistsIds": [],
+			"clinicsIds": []
 		},
 		{
 			"id": 2,
 			"name": "Alex Bond",
-			"therapistsIds": [0, 1, 2],
-			"clinicsIds": [0, 1, 2]
+			"therapistsIds": [],
+			"clinicsIds": []
 		}
 	]
 }

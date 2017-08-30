@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { ClinicService } from '../../services';
 import { Clinic } from '../../models';
 
+
 @Component({
   selector: 'app-clinics',
   templateUrl: './clinics.component.html',

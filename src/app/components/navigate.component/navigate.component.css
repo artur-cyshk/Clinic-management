@@ -35,7 +35,8 @@ nav > button {
 	outline: none;
 	cursor: pointer;
 	color: white;
-    background: #1c718c;
+  background: #1c718c;
+  transition: 0.1s linear all;
 }
 
 nav > button > span {
@@ -54,6 +55,7 @@ nav > ul > li {
 	border-bottom: 1px solid #f7f7f7;
 	cursor: pointer;
 	color: #f7f7f7;
+	transition: 0.1s linear all;
 }
 
 nav > ul > li:first-child,
@@ -61,7 +63,11 @@ nav > ul > li:last-child {
 	border-top: 0;
 }
 
-nav > ul > li.active {
+nav > ul > li:hover, nav > button:hover, nav > button:active {
+	background-color: #235869;
+}
+
+nav > ul > li.active, nav > ul > li:active {
 	background-color: #f7f7f7;
 	color: #3999b7;
 }

@@ -3,7 +3,7 @@ import { NavigateComponent } from './navigate.component/navigate.component';
 import { WorkflowComponent } from './workflow.component/workflow.component';
 import { ClinicComponent } from './clinic.component/clinic.component';
 import { ClinicsComponent } from './clinics.component/clinics.component';
-import { LinkedClinicsComponent } from './linkedClinics.component/linkedClinics.component';
+import { LinkedItemsComponent } from './linkedItems.component/linkedItems.component';
 import { PatientComponent } from './patient.component/patient.component';
 import { PatientsComponent } from './patients.component/patients.component';
 import { TherapistComponent } from './therapist.component/therapist.component';
@@ -24,5 +24,5 @@ export {
 	WorkflowComponent,
 	NewItemComponent,
 	EditItemComponent,
-	LinkedClinicsComponent
+	LinkedItemsComponent
 };

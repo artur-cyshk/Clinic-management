@@ -1,3 +1,6 @@
-<h1>
-  {{title}}
-</h1>
+<app-new-item (newItemAdded)="addNewPatient($event)" [topicName]="'patient'" [iconClassName]="'fa-address-card-o'"></app-new-item>
+<ul>
+	<li *ngFor="let patient of patientService.observableList | async">
+		<app-patient (onPatientEdited)="editPatient($event)" [patient]="patient" (onPatientRemoved)="removePatient($event)"></app-patient>
+	</li>
+</ul>
