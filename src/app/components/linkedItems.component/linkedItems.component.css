@@ -41,10 +41,11 @@
 }
 
 .linked-list > li {
-  width: 115px;
+  min-width: 115px;
+  max-width: 300px;
+  padding: 5px;
   display: inline-flex;
   justify-content: center;
-  padding: 2px;
   align-items: center;
   cursor: pointer;
   height: 35px;
