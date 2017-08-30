@@ -28,6 +28,7 @@
   padding-left: 36px;
   overflow: hidden;
   height: 100%;
+  word-break: break-all;
   align-items: center;
   display: flex;
 }

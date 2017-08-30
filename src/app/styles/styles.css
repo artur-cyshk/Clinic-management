@@ -30,6 +30,7 @@ router-outlet + * {
   flex: 1;
   flex-direction: column;
   padding: 15px;
+  min-width: 400px;
   overflow-y: auto;
 }
 

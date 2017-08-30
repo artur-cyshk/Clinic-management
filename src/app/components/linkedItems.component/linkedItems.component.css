@@ -31,8 +31,9 @@
 
 .linked-list {
 	width: 100%;
-	display: flex;
+	display: flex;    
 	justify-content: center;
+  flex-wrap: wrap;
 	padding: 10px;
   font-weight: 200;
 	background-color: #2b6f84;
